@@ -5,8 +5,8 @@
       "constant": false,
       "inputs": [
         {
-          "name": "symbol",
-          "type": "string"
+          "name": "tokenAddress",
+          "type": "address"
         },
         {
           "name": "termsContract",
@@ -17,6 +17,25 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "tokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "getSimpleInterestTermsContractAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -37,32 +56,13 @@
       "payable": false,
       "stateMutability": "view",
       "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "symbol",
-          "type": "string"
-        }
-      ],
-      "name": "getSimpleInterestTermsContractAddress",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b6103f08061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806335329b1b1461005c5780639ef3daf6146100d8578063d3e5cd921461013f575b600080fd5b341561006757600080fd5b6100d6600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101dc565b005b34156100e357600080fd5b6100fd6004808035600019169060200190919050506102c3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561014a57600080fd5b61019a600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506102f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b80600080846040518082805190602001908083835b60208310151561021657805182526020820191506020810190506020830392506101f1565b6001836020036101000a038019825116818451168082178552505050505050905001807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b60006020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806000836040518082805190602001908083835b602083101515610331578051825260208201915060208101905060208303925061030c565b6001836020036101000a038019825116818451168082178552505050505050905001807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690509190505600a165627a7a72305820fddfe50d8104960046a2c72d9327acbb9c82ad150c9054b6bfb754011820ff190029",
-  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806335329b1b1461005c5780639ef3daf6146100d8578063d3e5cd921461013f575b600080fd5b341561006757600080fd5b6100d6600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506101dc565b005b34156100e357600080fd5b6100fd6004808035600019169060200190919050506102c3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561014a57600080fd5b61019a600480803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506102f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b80600080846040518082805190602001908083835b60208310151561021657805182526020820191506020810190506020830392506101f1565b6001836020036101000a038019825116818451168082178552505050505050905001807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b60006020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806000836040518082805190602001908083835b602083101515610331578051825260208201915060208101905060208303925061030c565b6001836020036101000a038019825116818451168082178552505050505050905001807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690509190505600a165627a7a72305820fddfe50d8104960046a2c72d9327acbb9c82ad150c9054b6bfb754011820ff190029",
-  "sourceMap": "26:581:0:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "26:581:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;134:237;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;63:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;377:228;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;134:237;351:13;236:28;:112;288:6;265:82;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;;;236:112:0;;;;;;;;;;;;;;;;;;:128;;;;;;;;;;;;;;;;;;134:237;;:::o;63:64::-;;;;;;;;;;;;;;;;;;;;;;:::o;377:228::-;460:7;486:28;:112;538:6;515:82;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:2;51:6;36:153;;;182:3;176:5;171:3;164:6;98:2;93:3;89;82:19;;123:2;118:3;114;107:19;;148:2;143:3;139;132:19;;36:153;;;274:1;267:3;263:2;259:3;254;250;246;315:4;311:3;305;299:5;295:3;356:4;350:3;344:5;340:3;389:7;380;377:2;372:3;365:6;3:399;;;;;;;;;;;;;;;;;;;;;;;;;;486:112:0;;;;;;;;;;;;;;;;;;;;;;;;;;;479:119;;377:228;;;:::o",
-  "source": "pragma solidity 0.4.18;\n\n\ncontract TermsContractRegistry {\n    mapping (bytes32 => address) public symbolToTermsContractAddress;\n\n    function setSimpleInterestTermsContractAddress(string symbol, address termsContract) public {\n        symbolToTermsContractAddress[keccak256(\n            symbol,\n            \"SimpleInterestTermsContract\"\n        )] = termsContract;\n    }\n\n    function getSimpleInterestTermsContractAddress(string symbol) public view returns (address) {\n        return symbolToTermsContractAddress[keccak256(\n            symbol,\n            \"SimpleInterestTermsContract\"\n        )];\n    }\n}\n",
+  "bytecode": "0x6060604052341561000f57600080fd5b6103848061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631ad43dc01461005c5780636ae369c1146100b45780639ef3daf61461012d575b600080fd5b341561006757600080fd5b6100b2600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610194565b005b34156100bf57600080fd5b6100eb600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610269565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561013857600080fd5b610152600480803560001916906020019091905050610325565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b8060008084604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166c01000000000000000000000000028152601401807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600080600083604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166c01000000000000000000000000028152601401807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b60006020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058201e1cb94b767f77c849669c8621bb9667917edbb46437602374dbd988d8edd0cd0029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631ad43dc01461005c5780636ae369c1146100b45780639ef3daf61461012d575b600080fd5b341561006757600080fd5b6100b2600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610194565b005b34156100bf57600080fd5b6100eb600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610269565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561013857600080fd5b610152600480803560001916906020019091905050610325565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b8060008084604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166c01000000000000000000000000028152601401807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600080600083604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166c01000000000000000000000000028152601401807f53696d706c65496e7465726573745465726d73436f6e74726163740000000000815250601b0191505060405180910390206000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b60006020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058201e1cb94b767f77c849669c8621bb9667917edbb46437602374dbd988d8edd0cd0029",
+  "sourceMap": "26:607:0:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:607:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;134:250;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;390:241;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;63:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;134:250;364:13;243:28;:118;295:12;272:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;243:118;;;;;;;;;;;;;;;;;;:134;;;;;;;;;;;;;;;;;;134:250;;:::o;390:241::-;480:7;506:28;:118;558:12;535:88;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;506:118;;;;;;;;;;;;;;;;;;;;;;;;;;;499:125;;390:241;;;:::o;63:64::-;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.4.18;\n\n\ncontract TermsContractRegistry {\n    mapping (bytes32 => address) public symbolToTermsContractAddress;\n\n    function setSimpleInterestTermsContractAddress(address tokenAddress, address termsContract) public {\n        symbolToTermsContractAddress[keccak256(\n            tokenAddress,\n            \"SimpleInterestTermsContract\"\n        )] = termsContract;\n    }\n\n    function getSimpleInterestTermsContractAddress(address tokenAddress) public view returns (address) {\n        return symbolToTermsContractAddress[keccak256(\n            tokenAddress,\n            \"SimpleInterestTermsContract\"\n        )];\n    }\n}\n",
   "sourcePath": "/Users/nadavhollander/Documents/Dharma/Development/charta/contracts/examples/TermsContractRegistry.sol",
   "ast": {
     "attributes": {
@@ -170,28 +170,28 @@
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "symbol",
+                      "name": "tokenAddress",
                       "scope": 22,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "string memory",
+                      "type": "address",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "string",
-                          "type": "string storage pointer"
+                          "name": "address",
+                          "type": "address"
                         },
                         "id": 6,
                         "name": "ElementaryTypeName",
-                        "src": "181:6:0"
+                        "src": "181:7:0"
                       }
                     ],
                     "id": 7,
                     "name": "VariableDeclaration",
-                    "src": "181:13:0"
+                    "src": "181:20:0"
                   },
                   {
                     "attributes": {
@@ -212,17 +212,17 @@
                         },
                         "id": 8,
                         "name": "ElementaryTypeName",
-                        "src": "196:7:0"
+                        "src": "203:7:0"
                       }
                     ],
                     "id": 9,
                     "name": "VariableDeclaration",
-                    "src": "196:21:0"
+                    "src": "203:21:0"
                   }
                 ],
                 "id": 10,
                 "name": "ParameterList",
-                "src": "180:38:0"
+                "src": "180:45:0"
               },
               {
                 "attributes": {
@@ -233,7 +233,7 @@
                 "children": [],
                 "id": 11,
                 "name": "ParameterList",
-                "src": "226:0:0"
+                "src": "233:0:0"
               },
               {
                 "children": [
@@ -272,7 +272,7 @@
                                 },
                                 "id": 12,
                                 "name": "Identifier",
-                                "src": "236:28:0"
+                                "src": "243:28:0"
                               },
                               {
                                 "attributes": {
@@ -293,8 +293,8 @@
                                     "attributes": {
                                       "argumentTypes": [
                                         {
-                                          "typeIdentifier": "t_string_memory_ptr",
-                                          "typeString": "string memory"
+                                          "typeIdentifier": "t_address",
+                                          "typeString": "address"
                                         },
                                         {
                                           "typeIdentifier": "t_stringliteral_8b4cb97860a0dbe2b88011c128ededd7ecf3885dfbcfa754c7192f454c8d53ae",
@@ -310,7 +310,7 @@
                                     },
                                     "id": 13,
                                     "name": "Identifier",
-                                    "src": "265:9:0"
+                                    "src": "272:9:0"
                                   },
                                   {
                                     "attributes": {
@@ -319,12 +319,12 @@
                                         null
                                       ],
                                       "referencedDeclaration": 7,
-                                      "type": "string memory",
-                                      "value": "symbol"
+                                      "type": "address",
+                                      "value": "tokenAddress"
                                     },
                                     "id": 14,
                                     "name": "Identifier",
-                                    "src": "288:6:0"
+                                    "src": "295:12:0"
                                   },
                                   {
                                     "attributes": {
@@ -341,17 +341,17 @@
                                     },
                                     "id": 15,
                                     "name": "Literal",
-                                    "src": "308:29:0"
+                                    "src": "321:29:0"
                                   }
                                 ],
                                 "id": 16,
                                 "name": "FunctionCall",
-                                "src": "265:82:0"
+                                "src": "272:88:0"
                               }
                             ],
                             "id": 17,
                             "name": "IndexAccess",
-                            "src": "236:112:0"
+                            "src": "243:118:0"
                           },
                           {
                             "attributes": {
@@ -365,27 +365,27 @@
                             },
                             "id": 18,
                             "name": "Identifier",
-                            "src": "351:13:0"
+                            "src": "364:13:0"
                           }
                         ],
                         "id": 19,
                         "name": "Assignment",
-                        "src": "236:128:0"
+                        "src": "243:134:0"
                       }
                     ],
                     "id": 20,
                     "name": "ExpressionStatement",
-                    "src": "236:128:0"
+                    "src": "243:134:0"
                   }
                 ],
                 "id": 21,
                 "name": "Block",
-                "src": "226:145:0"
+                "src": "233:151:0"
               }
             ],
             "id": 22,
             "name": "FunctionDefinition",
-            "src": "134:237:0"
+            "src": "134:250:0"
           },
           {
             "attributes": {
@@ -408,33 +408,33 @@
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "symbol",
+                      "name": "tokenAddress",
                       "scope": 37,
                       "stateVariable": false,
                       "storageLocation": "default",
-                      "type": "string memory",
+                      "type": "address",
                       "value": null,
                       "visibility": "internal"
                     },
                     "children": [
                       {
                         "attributes": {
-                          "name": "string",
-                          "type": "string storage pointer"
+                          "name": "address",
+                          "type": "address"
                         },
                         "id": 23,
                         "name": "ElementaryTypeName",
-                        "src": "424:6:0"
+                        "src": "437:7:0"
                       }
                     ],
                     "id": 24,
                     "name": "VariableDeclaration",
-                    "src": "424:13:0"
+                    "src": "437:20:0"
                   }
                 ],
                 "id": 25,
                 "name": "ParameterList",
-                "src": "423:15:0"
+                "src": "436:22:0"
               },
               {
                 "children": [
@@ -457,17 +457,17 @@
                         },
                         "id": 26,
                         "name": "ElementaryTypeName",
-                        "src": "460:7:0"
+                        "src": "480:7:0"
                       }
                     ],
                     "id": 27,
                     "name": "VariableDeclaration",
-                    "src": "460:7:0"
+                    "src": "480:7:0"
                   }
                 ],
                 "id": 28,
                 "name": "ParameterList",
-                "src": "459:9:0"
+                "src": "479:9:0"
               },
               {
                 "children": [
@@ -498,7 +498,7 @@
                             },
                             "id": 29,
                             "name": "Identifier",
-                            "src": "486:28:0"
+                            "src": "506:28:0"
                           },
                           {
                             "attributes": {
@@ -519,8 +519,8 @@
                                 "attributes": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_string_memory_ptr",
-                                      "typeString": "string memory"
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
                                     },
                                     {
                                       "typeIdentifier": "t_stringliteral_8b4cb97860a0dbe2b88011c128ededd7ecf3885dfbcfa754c7192f454c8d53ae",
@@ -536,7 +536,7 @@
                                 },
                                 "id": 30,
                                 "name": "Identifier",
-                                "src": "515:9:0"
+                                "src": "535:9:0"
                               },
                               {
                                 "attributes": {
@@ -545,12 +545,12 @@
                                     null
                                   ],
                                   "referencedDeclaration": 24,
-                                  "type": "string memory",
-                                  "value": "symbol"
+                                  "type": "address",
+                                  "value": "tokenAddress"
                                 },
                                 "id": 31,
                                 "name": "Identifier",
-                                "src": "538:6:0"
+                                "src": "558:12:0"
                               },
                               {
                                 "attributes": {
@@ -567,42 +567,42 @@
                                 },
                                 "id": 32,
                                 "name": "Literal",
-                                "src": "558:29:0"
+                                "src": "584:29:0"
                               }
                             ],
                             "id": 33,
                             "name": "FunctionCall",
-                            "src": "515:82:0"
+                            "src": "535:88:0"
                           }
                         ],
                         "id": 34,
                         "name": "IndexAccess",
-                        "src": "486:112:0"
+                        "src": "506:118:0"
                       }
                     ],
                     "id": 35,
                     "name": "Return",
-                    "src": "479:119:0"
+                    "src": "499:125:0"
                   }
                 ],
                 "id": 36,
                 "name": "Block",
-                "src": "469:136:0"
+                "src": "489:142:0"
               }
             ],
             "id": 37,
             "name": "FunctionDefinition",
-            "src": "377:228:0"
+            "src": "390:241:0"
           }
         ],
         "id": 38,
         "name": "ContractDefinition",
-        "src": "26:581:0"
+        "src": "26:607:0"
       }
     ],
     "id": 39,
     "name": "SourceUnit",
-    "src": "0:608:0"
+    "src": "0:634:0"
   },
   "compiler": {
     "name": "solc",
@@ -616,5 +616,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-06T04:59:25.195Z"
+  "updatedAt": "2018-02-08T21:49:27.824Z"
 }

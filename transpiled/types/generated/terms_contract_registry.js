@@ -16,26 +16,35 @@ class TermsContractRegistryContract extends base_contract_1.BaseContract {
     constructor(web3ContractInstance, defaults) {
         super(web3ContractInstance, defaults);
         this.setSimpleInterestTermsContractAddress = {
-            sendTransactionAsync(symbol, termsContract, txData = {}) {
+            sendTransactionAsync(tokenAddress, termsContract, txData = {}) {
                 return __awaiter(this, void 0, void 0, function* () {
                     const self = this;
-                    const txDataWithDefaults = yield self.applyDefaultsToTxDataAsync(txData, self.setSimpleInterestTermsContractAddress.estimateGasAsync.bind(self, symbol, termsContract));
-                    const txHash = yield utils_1.promisify(self.web3ContractInstance.setSimpleInterestTermsContractAddress, self.web3ContractInstance)(symbol, termsContract, txDataWithDefaults);
+                    const txDataWithDefaults = yield self.applyDefaultsToTxDataAsync(txData, self.setSimpleInterestTermsContractAddress.estimateGasAsync.bind(self, tokenAddress, termsContract));
+                    const txHash = yield utils_1.promisify(self.web3ContractInstance.setSimpleInterestTermsContractAddress, self.web3ContractInstance)(tokenAddress, termsContract, txDataWithDefaults);
                     return txHash;
                 });
             },
-            estimateGasAsync(symbol, termsContract, txData = {}) {
+            estimateGasAsync(tokenAddress, termsContract, txData = {}) {
                 return __awaiter(this, void 0, void 0, function* () {
                     const self = this;
                     const txDataWithDefaults = yield self.applyDefaultsToTxDataAsync(txData);
-                    const gas = yield utils_1.promisify(self.web3ContractInstance.setSimpleInterestTermsContractAddress.estimateGas, self.web3ContractInstance)(symbol, termsContract, txDataWithDefaults);
+                    const gas = yield utils_1.promisify(self.web3ContractInstance.setSimpleInterestTermsContractAddress.estimateGas, self.web3ContractInstance)(tokenAddress, termsContract, txDataWithDefaults);
                     return gas;
                 });
             },
-            getABIEncodedTransactionData(symbol, termsContract, txData = {}) {
+            getABIEncodedTransactionData(tokenAddress, termsContract, txData = {}) {
                 const self = this;
                 const abiEncodedTransactionData = self.web3ContractInstance.setSimpleInterestTermsContractAddress.getData();
                 return abiEncodedTransactionData;
+            },
+        };
+        this.getSimpleInterestTermsContractAddress = {
+            callAsync(tokenAddress, defaultBlock) {
+                return __awaiter(this, void 0, void 0, function* () {
+                    const self = this;
+                    const result = yield utils_1.promisify(self.web3ContractInstance.getSimpleInterestTermsContractAddress.call, self.web3ContractInstance)(tokenAddress);
+                    return result;
+                });
             },
         };
         this.symbolToTermsContractAddress = {
@@ -43,15 +52,6 @@ class TermsContractRegistryContract extends base_contract_1.BaseContract {
                 return __awaiter(this, void 0, void 0, function* () {
                     const self = this;
                     const result = yield utils_1.promisify(self.web3ContractInstance.symbolToTermsContractAddress.call, self.web3ContractInstance)(index);
-                    return result;
-                });
-            },
-        };
-        this.getSimpleInterestTermsContractAddress = {
-            callAsync(symbol, defaultBlock) {
-                return __awaiter(this, void 0, void 0, function* () {
-                    const self = this;
-                    const result = yield utils_1.promisify(self.web3ContractInstance.getSimpleInterestTermsContractAddress.call, self.web3ContractInstance)(symbol);
                     return result;
                 });
             },
