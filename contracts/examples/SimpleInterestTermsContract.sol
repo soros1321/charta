@@ -110,7 +110,7 @@ contract SimpleInterestTermsContract {
             return 0;
         } else {
             uint numRepaymentPeriods =
-                timestamp.sub(issuanceBlockTimestamp).div(amortizationUnitLength);
+                timestamp.sub(issuanceBlockTimestamp);
 
             return 0;
         }
