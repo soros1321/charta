@@ -109,8 +109,7 @@ contract SimpleInterestTermsContract {
         if (timestamp < issuanceBlockTimestamp) {
             return 0;
         } else {
-            uint numRepaymentPeriods =
-                timestamp.sub(issuanceBlockTimestamp);
+            uint numRepaymentPeriods = 10;
 
             return 0;
         }
