@@ -106,16 +106,14 @@ contract SimpleInterestTermsContract {
 
         uint amortizationUnitLength = getAmortizationUnitLengthInSeconds(amortizationUnitType);
 
-        return amortizationUnitLength;
-
-        /* if (timestamp < issuanceBlockTimestamp) {
+        if (timestamp < issuanceBlockTimestamp) {
             return 0;
         } else {
             uint numRepaymentPeriods =
                 timestamp.sub(issuanceBlockTimestamp).div(amortizationUnitLength);
 
-            return numRepaymentPeriods.mul(principalPlusInterest).div(termLengthInAmortizationUnits);
-        } */
+            return 0;
+        }
     }
 
      /// Returns the cumulative units-of-value repaid by the point at which the timestamp of a given block has lapsed.
