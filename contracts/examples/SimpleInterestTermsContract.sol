@@ -104,10 +104,9 @@ contract SimpleInterestTermsContract {
         var (principalPlusInterest, amortizationUnitType, termLengthInAmortizationUnits) =
             unpackParameters(parameters);
 
-        return 0;
+        uint amortizationUnitLength = getAmortizationUnitLengthInSeconds(amortizationUnitType);
 
-        /* uint amortizationUnitLength = getAmortizationUnitLengthInSeconds(amortizationUnitType);
- */
+        return amortizationUnitLength;
 
         /* if (timestamp < issuanceBlockTimestamp) {
             return 0;
