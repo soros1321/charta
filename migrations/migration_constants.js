@@ -37,6 +37,7 @@ const CONTRACT_NAMES = [
     "TokenTransferProxy",
     "RepaymentRouter",
     "Collateralizer",
+    "TokenRegistry",
 ];
 
 /**
